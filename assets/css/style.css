@@ -111,3 +111,110 @@ img {
   overflow-y: auto;
   transition: var(--transition);
 }
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: clamp(20px, 2vw, 28px);
+}
+
+.brand-logo i {
+  font-size: clamp(20px, 2vw, 28px);
+  color: #e1306c;
+}
+
+.brand-logo span {
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.user-avatar-wrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.user-avatar {
+  width: clamp(70px, 6vw, 84px);
+  height: clamp(70px, 6vw, 84px);
+  border-radius: 50%;
+  border: 3px solid var(--bg-card);
+  box-shadow: var(--shadow-md);
+}
+
+.user-name {
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.user-handle {
+  font-size: clamp(0.75rem, 0.9vw, 0.85rem);
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 18px 0 14px;
+  padding: 0 4px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat-value {
+  font-size: clamp(0.875rem, 1vw, 0.95rem);
+  font-weight: 700;
+  color: var(--text-main);
+}
+.stat-label {
+  font-size: clamp(0.65rem, 0.8vw, 0.75rem);
+  color: var(--text-muted);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.user-bio {
+  font-size: clamp(0.75rem, 0.85vw, 0.825rem);
+  color: var(--text-muted);
+  line-height: 1.45;
+  max-width: 230px;
+}
+
+.highlights-section {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+.highlights-title {
+  font-size: clamp(0.8rem, 0.9vw, 0.85rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hightlights-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
