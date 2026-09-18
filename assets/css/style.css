@@ -1,3 +1,4 @@
+/* Theme */
 :root {
   --bg-app: #f8f9fc;
   --bg-card: #ffffff;
@@ -24,7 +25,7 @@
 
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+/* Dark Theme */
 [data-theme="dark"] {
   --bg-app: #0b0f17;
   --bg-card: #151c28;
@@ -37,4 +38,55 @@
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  transition: var(--transition);
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Custom slim scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-lite);
+  border-radius: 10px;
 }
