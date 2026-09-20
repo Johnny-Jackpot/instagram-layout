@@ -409,3 +409,125 @@ img {
     box-shadow: 0 8px 24px rgba(221, 36, 118, 0.45);
   }
 }
+
+.stories-section {
+  margin-bottom: clamp(20px, 2.5vw, 36px);
+  width: 100%;
+}
+.section-title {
+  font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.stories-flex {
+  display: flex;
+  gap: clamp(14px, 1.5vw, 22px);
+  overflow-x: auto;
+  padding: 8px 4px 14px 4px;
+  width: 100%;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &:hover {
+    transform: translateY(-4px);
+
+    .story-ring-container {
+      transform: scale(1.08) rotate(4deg);
+      box-shadow: 0 10px 10px -4px rgba(225, 48, 108, 0.45);
+    }
+
+    .story-avatar {
+      transform: scale(1.02);
+    }
+
+    .story-username {
+      color: #e1306c;
+    }
+  }
+}
+
+.story-ring-container {
+  position: relative;
+  padding: 3px;
+  border-radius: 50%;
+  background: var(--story-gradient);
+  transition: trasnform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+
+  &.your-story {
+    background: transparent;
+    border: 2px dashed var(--text-lite);
+    padding: 2px;
+  }
+
+  &.unseen {
+    background: var(--story-gradient);
+  }
+
+  &.seen {
+    background: var(--border-color);
+  }
+}
+
+.story-avatar {
+  width: clamp(56px, 5vw, 68px);
+  height: clamp(56px, 5vw, 68px);
+  border-radius: 50%;
+  border: 3px solid var(--bg-card);
+  background-color: var(--bg-card);
+  transition: transform 0.3s ease;
+}
+
+.story-add-badge {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background: var(--accent-blue);
+  color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg-card);
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
+.story-username {
+  font-size: clamp(0.7rem, 0.8vw, 0.775rem);
+  font-weight: 600;
+  color: var(--text-main);
+  max-width: 76px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.story-live-badge {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #e11d48, #be123c);
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 8px;
+  border: 2px solid var(--bg-card);
+  letter-spacing: 0.5px;
+}
