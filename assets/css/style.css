@@ -98,6 +98,7 @@ img {
   width: 100%;
 }
 
+/* Sidebar column */
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -302,4 +303,15 @@ img {
 }
 .nav-item.active i {
   color: #e1306c;
+}
+
+/* Main content column */
+.main-content {
+  padding: clamp(16px, 2.2vw, 36px);
+  overflow-y: auto;
+  width: 100%;
+}
+
+.mobile-top-header, .mobile-bottom-nav {
+  display: none;
 }
