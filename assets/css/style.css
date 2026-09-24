@@ -696,3 +696,50 @@ img {
   cursor: pointer;
   font-weight: 600;
 }
+
+.mobile-top-header .mobile-logo {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.5px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.mobile-top-header .mobile-action-btn {
+  font-size: 24px;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav-btn {
+  font-size: 24px;
+  color: var(--text-main);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+
+  .nav-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 6px;
+    background-color: var(--accent-pink);
+    border-radius: 50%;
+    border: 1.5px solid var(--bg-card);
+  }
+
+  .nav-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1.5px solid var(--text-main);
+  }
+}
+
