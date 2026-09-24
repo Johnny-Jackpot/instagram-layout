@@ -1,18 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   //theme toggle
-  const themeToggleBtn = document.getElementById('themeToggleBtn')
-  const mobileThemeToggleBtn = document.getElementById('mobileThemeToggleBtn')
-  const themeIcon = document.getElementById('themeIcon')
-  const mobileThemeIcon = document.getElementById('mobileThemeIcon')
   const htmlElement = document.documentElement
 
   function toggleTheme() {
     const currentTheme = htmlElement.getAttribute('data-theme')
     const newTheme = currentTheme === 'light' ? 'dark' : 'light'
-
     htmlElement.setAttribute('data-theme', newTheme)
-    toggleThemeIcon(themeIcon)
-    toggleThemeIcon(mobileThemeIcon)
+    toggleThemeIcon(document.getElementById('themeIcon'))
+    toggleThemeIcon(document.getElementById('mobileThemeIcon'))
   }
 
   function toggleThemeIcon (themeIcon) {
@@ -21,7 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
     themeIcon.classList.toggle('ph-sun')
   }
 
+  const themeToggleBtn = document.getElementById('themeToggleBtn')
   if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme)
+
+  const mobileThemeToggleBtn = document.getElementById('mobileThemeToggleBtn')
   if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleTheme)
 
   //sidebar active state
