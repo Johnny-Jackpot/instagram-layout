@@ -313,7 +313,6 @@ img {
 /* Main content column */
 .main-content {
   padding: clamp(16px, 2.2vw, 36px);
-  overflow-y: auto;
   width: 100%;
 }
 
