@@ -742,4 +742,79 @@ img {
     border: 1.5px solid var(--text-main);
   }
 }
-
+/* breakpoint: desktop */
+@media (max-width: 1480px) {
+  .feed-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* breakpoint: tablet */
+@media (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: 80px 1fr;
+  }
+  .feed-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .brand-logo span, .user-profile-card, .highlights-section, .nav-item span {
+    display: none;
+  }
+  .sidebar {
+    padding: 20px 12px;
+    align-items: center;
+  }
+  .nav-item {
+    justify-content: center;
+    padding: 12px;
+  }
+}
+/* breakpoint: phones */
+@media (max-width: 640px) {
+  .app-container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar, .top-header {
+    display: none;
+  }
+  .mobile-top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: var(--bg-card);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    margin-bottom: 16px;
+  }
+  .main-content {
+    padding: 0 12px 80px 12px;
+  }
+  .stories-section {
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  .section-title {
+    display: none;
+  }
+  .feed-grid {
+    grid-template-columns: 1fr;
+  }
+  .mobile-bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    z-index: 999;
+    backdrop-filter: blur(12px);
+  }
+  .mobile-nav-btn.active i {
+    color: #e1306c;
+  }
+}
